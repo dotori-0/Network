@@ -16,6 +16,10 @@
 		0A9BEA572890E1F2003FFBDA /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9BEA562890E1F2003FFBDA /* SearchViewController.swift */; };
 		0A9BEA5A2890E4DF003FFBDA /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9BEA582890E4DF003FFBDA /* ListTableViewCell.swift */; };
 		0A9BEA5B2890E4DF003FFBDA /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A9BEA592890E4DF003FFBDA /* ListTableViewCell.xib */; };
+		0A9BEA5E28920CD6003FFBDA /* ViewPresentableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9BEA5D28920CD6003FFBDA /* ViewPresentableProtocol.swift */; };
+		0A9BEA602892237B003FFBDA /* LottoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9BEA5F2892237B003FFBDA /* LottoViewController.swift */; };
+		0A9BEA622892304F003FFBDA /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9BEA612892304F003FFBDA /* TranslateViewController.swift */; };
+		0A9BEA6428923AA0003FFBDA /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9BEA6328923AA0003FFBDA /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		0A9BEA562890E1F2003FFBDA /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		0A9BEA582890E4DF003FFBDA /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		0A9BEA592890E4DF003FFBDA /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
+		0A9BEA5D28920CD6003FFBDA /* ViewPresentableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPresentableProtocol.swift; sourceTree = "<group>"; };
+		0A9BEA5F2892237B003FFBDA /* LottoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoViewController.swift; sourceTree = "<group>"; };
+		0A9BEA612892304F003FFBDA /* TranslateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
+		0A9BEA6328923AA0003FFBDA /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,11 +77,23 @@
 				0A9BEA562890E1F2003FFBDA /* SearchViewController.swift */,
 				0A9BEA582890E4DF003FFBDA /* ListTableViewCell.swift */,
 				0A9BEA592890E4DF003FFBDA /* ListTableViewCell.xib */,
+				0A9BEA5F2892237B003FFBDA /* LottoViewController.swift */,
+				0A9BEA612892304F003FFBDA /* TranslateViewController.swift */,
+				0A9BEA6328923AA0003FFBDA /* WebViewController.swift */,
+				0A9BEA5C28920CA3003FFBDA /* Protocol */,
 				0A9BEA4B2890DD8B003FFBDA /* Assets.xcassets */,
 				0A9BEA4D2890DD8B003FFBDA /* LaunchScreen.storyboard */,
 				0A9BEA502890DD8B003FFBDA /* Info.plist */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		0A9BEA5C28920CA3003FFBDA /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				0A9BEA5D28920CD6003FFBDA /* ViewPresentableProtocol.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,8 +169,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A9BEA472890DD89003FFBDA /* ViewController.swift in Sources */,
+				0A9BEA6428923AA0003FFBDA /* WebViewController.swift in Sources */,
 				0A9BEA432890DD89003FFBDA /* AppDelegate.swift in Sources */,
 				0A9BEA572890E1F2003FFBDA /* SearchViewController.swift in Sources */,
+				0A9BEA602892237B003FFBDA /* LottoViewController.swift in Sources */,
+				0A9BEA5E28920CD6003FFBDA /* ViewPresentableProtocol.swift in Sources */,
+				0A9BEA622892304F003FFBDA /* TranslateViewController.swift in Sources */,
 				0A9BEA452890DD89003FFBDA /* SceneDelegate.swift in Sources */,
 				0A9BEA5A2890E4DF003FFBDA /* ListTableViewCell.swift in Sources */,
 			);

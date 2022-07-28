@@ -27,6 +27,7 @@ extension UIViewController {
 
 class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+
     @IBOutlet weak var searchTableView: UITableView!
     @IBOutlet weak var second: UITableView!
     @IBOutlet weak var third: UITableView!
@@ -41,9 +42,21 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         searchTableView.dataSource = self
         
         // 테이블뷰가 사용할 테이블뷰 셀 등록
-        // XIB: Xml Interface Builder <= 예전에는 Nib이라는 파일을 사용했음
+        // XIB: Xml Interface Builder <= 예전에는 Nib이라는 파일을 사용했음 // 🕘 2:58:55
         searchTableView.register(UINib(nibName: ListTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: ListTableViewCell.identifier)
     }
+    
+    
+    func configureView() {
+        searchTableView.backgroundColor = .clear
+        searchTableView.separatorColor = .clear
+        searchTableView.rowHeight = 60
+    }
+    
+    func configureLabel(text: String) {
+        return
+    }
+    
 
 //    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //            Method does not override any method from its superclass
