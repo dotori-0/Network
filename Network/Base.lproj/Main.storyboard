@@ -204,11 +204,30 @@
                                     <constraint firstAttribute="height" constant="44" id="AkT-fu-yie"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem title="Item" id="uJA-SS-2H4"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="7UD-2D-rdM"/>
-                                    <barButtonItem title="새로고침" id="8Vr-kF-R62"/>
-                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="aZ1-Jh-Luv"/>
-                                    <barButtonItem title="Item" id="cOP-nO-ERE"/>
+                                    <barButtonItem systemItem="stop" id="uJA-SS-2H4">
+                                        <connections>
+                                            <action selector="closeButtonClicked:" destination="kLS-8V-K4f" id="evr-mU-94I"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="lUh-YI-BB4"/>
+                                    <barButtonItem title="Item" image="arrow.left" catalog="system" id="6nc-gq-rDC">
+                                        <connections>
+                                            <action selector="goBackButtonClicked:" destination="kLS-8V-K4f" id="fbI-4s-f6W"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="go0-Bu-pdN"/>
+                                    <barButtonItem systemItem="refresh" id="8Vr-kF-R62">
+                                        <connections>
+                                            <action selector="refreshButtonClicked:" destination="kLS-8V-K4f" id="M0o-kM-gXT"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="1ej-Ta-Acx"/>
+                                    <barButtonItem title="Item" image="arrow.right" catalog="system" id="cOP-nO-ERE">
+                                        <connections>
+                                            <action selector="goForwardButtonClicked:" destination="kLS-8V-K4f" id="JTh-aw-Yae"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="s1W-G8-9rP"/>
                                 </items>
                             </toolbar>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Mm-hk-Ays">
@@ -246,6 +265,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.left" catalog="system" width="128" height="98"/>
+        <image name="arrow.right" catalog="system" width="128" height="98"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

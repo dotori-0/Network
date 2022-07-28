@@ -9,18 +9,19 @@ import UIKit
 
 class ViewController: UIViewController, ViewPresentableProtocol {
     
+    
     static var identifier: String = "ViewController"
     
-//    var navigationTitleString: String = "대장님의 다마고치" 혹은
-    var navigationTitleString: String {  // 연산 프로퍼티로도 사용 가능. 단, 프로토콜의 최소 요건을 충족해야 함
-        // navigationTitleString은 { get set } 이므로 get과 set 둘 다 구현해야 함
-        get {
-            return "대장님의 다마고치"
-        }
-        set {
-            title = newValue
-        }
-    }
+    var navigationTitleString: String = "대장님의 다마고치"  // 혹은
+//    var navigationTitleString: String {  // 연산 프로퍼티로도 사용 가능. 단, 프로토콜의 최소 요건을 충족해야 함
+//        // navigationTitleString은 { get set } 이므로 get과 set 둘 다 구현해야 함
+//        get {
+//            return "대장님의 다마고치"
+//        }
+//        set {
+//            title = newValue
+//        }
+//    }
     
 //    let backgroundColor: UIColor = .blue
 //    var backgroundColor: UIColor = .blue

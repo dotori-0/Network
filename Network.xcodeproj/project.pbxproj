@@ -74,12 +74,7 @@
 				0A9BEA442890DD89003FFBDA /* SceneDelegate.swift */,
 				0A9BEA462890DD89003FFBDA /* ViewController.swift */,
 				0A9BEA482890DD89003FFBDA /* Main.storyboard */,
-				0A9BEA562890E1F2003FFBDA /* SearchViewController.swift */,
-				0A9BEA582890E4DF003FFBDA /* ListTableViewCell.swift */,
-				0A9BEA592890E4DF003FFBDA /* ListTableViewCell.xib */,
-				0A9BEA5F2892237B003FFBDA /* LottoViewController.swift */,
-				0A9BEA612892304F003FFBDA /* TranslateViewController.swift */,
-				0A9BEA6328923AA0003FFBDA /* WebViewController.swift */,
+				0A9BEA652892624B003FFBDA /* Lecture */,
 				0A9BEA5C28920CA3003FFBDA /* Protocol */,
 				0A9BEA4B2890DD8B003FFBDA /* Assets.xcassets */,
 				0A9BEA4D2890DD8B003FFBDA /* LaunchScreen.storyboard */,
@@ -94,6 +89,19 @@
 				0A9BEA5D28920CD6003FFBDA /* ViewPresentableProtocol.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		0A9BEA652892624B003FFBDA /* Lecture */ = {
+			isa = PBXGroup;
+			children = (
+				0A9BEA562890E1F2003FFBDA /* SearchViewController.swift */,
+				0A9BEA582890E4DF003FFBDA /* ListTableViewCell.swift */,
+				0A9BEA592890E4DF003FFBDA /* ListTableViewCell.xib */,
+				0A9BEA5F2892237B003FFBDA /* LottoViewController.swift */,
+				0A9BEA612892304F003FFBDA /* TranslateViewController.swift */,
+				0A9BEA6328923AA0003FFBDA /* WebViewController.swift */,
+			);
+			path = Lecture;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

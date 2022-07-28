@@ -42,7 +42,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         searchTableView.dataSource = self
         
         // 테이블뷰가 사용할 테이블뷰 셀 등록
-        // XIB: Xml Interface Builder <= 예전에는 Nib이라는 파일을 사용했음 // 🕘 2:58:55
+        // XIB: Xml Interface Builder <= 예전에는 Nib이라는 파일을 사용했음
         searchTableView.register(UINib(nibName: ListTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: ListTableViewCell.identifier)
     }
     
