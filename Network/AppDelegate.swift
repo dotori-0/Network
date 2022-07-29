@@ -26,6 +26,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         return true
     }
+    
+    
+    // 포그라운드 수신!
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.list, .banner, .badge, .sound])
+    }
 
     // MARK: UISceneSession Lifecycle
 
