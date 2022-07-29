@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kLS-8V-K4f">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9uk-17-hoW">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -72,6 +72,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldTouchedDown:" destination="KHz-eQ-gWz" eventType="touchDown" id="2UW-1g-qOe"/>
+                                </connections>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="280-Rk-nPe">
                                 <rect key="frame" x="73.5" y="438" width="267" height="20.5"/>
@@ -262,6 +265,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Av6-Yv-6bo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2561" y="72"/>
+        </scene>
+        <!--Location View Controller-->
+        <scene sceneID="JZh-9w-LMt">
+            <objects>
+                <viewController storyboardIdentifier="LocationViewController" id="ZTv-1z-5Y8" customClass="LocationViewController" customModule="Network" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nZF-oP-Yoa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zfr-Sf-ko9">
+                                <rect key="frame" x="20" y="64" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="baB-YY-mcb"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Local Notification"/>
+                                <connections>
+                                    <action selector="notificationButtonClicked:" destination="ZTv-1z-5Y8" eventType="touchUpInside" id="prg-m5-lIx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="o3Y-Ez-Aoh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Zfr-Sf-ko9" firstAttribute="leading" secondItem="o3Y-Ez-Aoh" secondAttribute="leading" constant="20" id="ZpI-Ip-sMy"/>
+                            <constraint firstItem="Zfr-Sf-ko9" firstAttribute="top" secondItem="o3Y-Ez-Aoh" secondAttribute="top" constant="20" id="ddV-jV-0xM"/>
+                            <constraint firstItem="o3Y-Ez-Aoh" firstAttribute="trailing" secondItem="Zfr-Sf-ko9" secondAttribute="trailing" constant="20" id="hgx-zG-qJu"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bTa-ql-N9x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3347" y="75"/>
         </scene>
     </scenes>
     <resources>
