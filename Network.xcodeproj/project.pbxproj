@@ -20,6 +20,10 @@
 		0A9BEA602892237B003FFBDA /* LottoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9BEA5F2892237B003FFBDA /* LottoViewController.swift */; };
 		0A9BEA622892304F003FFBDA /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9BEA612892304F003FFBDA /* TranslateViewController.swift */; };
 		0A9BEA6428923AA0003FFBDA /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9BEA6328923AA0003FFBDA /* WebViewController.swift */; };
+		0A9BEA6728935D53003FFBDA /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9BEA6628935D53003FFBDA /* LocationViewController.swift */; };
+		0A9BEA6C289384DF003FFBDA /* SCDream1.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A9BEA69289384DF003FFBDA /* SCDream1.otf */; };
+		0A9BEA6D289384DF003FFBDA /* SCDream5.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A9BEA6A289384DF003FFBDA /* SCDream5.otf */; };
+		0A9BEA6E289384DF003FFBDA /* SCDream9.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0A9BEA6B289384DF003FFBDA /* SCDream9.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,10 @@
 		0A9BEA5F2892237B003FFBDA /* LottoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoViewController.swift; sourceTree = "<group>"; };
 		0A9BEA612892304F003FFBDA /* TranslateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
 		0A9BEA6328923AA0003FFBDA /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		0A9BEA6628935D53003FFBDA /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		0A9BEA69289384DF003FFBDA /* SCDream1.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCDream1.otf; sourceTree = "<group>"; };
+		0A9BEA6A289384DF003FFBDA /* SCDream5.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCDream5.otf; sourceTree = "<group>"; };
+		0A9BEA6B289384DF003FFBDA /* SCDream9.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCDream9.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +84,7 @@
 				0A9BEA482890DD89003FFBDA /* Main.storyboard */,
 				0A9BEA652892624B003FFBDA /* Lecture */,
 				0A9BEA5C28920CA3003FFBDA /* Protocol */,
+				0A9BEA68289383F5003FFBDA /* Resource */,
 				0A9BEA4B2890DD8B003FFBDA /* Assets.xcassets */,
 				0A9BEA4D2890DD8B003FFBDA /* LaunchScreen.storyboard */,
 				0A9BEA502890DD8B003FFBDA /* Info.plist */,
@@ -100,8 +109,19 @@
 				0A9BEA5F2892237B003FFBDA /* LottoViewController.swift */,
 				0A9BEA612892304F003FFBDA /* TranslateViewController.swift */,
 				0A9BEA6328923AA0003FFBDA /* WebViewController.swift */,
+				0A9BEA6628935D53003FFBDA /* LocationViewController.swift */,
 			);
 			path = Lecture;
+			sourceTree = "<group>";
+		};
+		0A9BEA68289383F5003FFBDA /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				0A9BEA69289384DF003FFBDA /* SCDream1.otf */,
+				0A9BEA6A289384DF003FFBDA /* SCDream5.otf */,
+				0A9BEA6B289384DF003FFBDA /* SCDream9.otf */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,8 +182,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A9BEA6C289384DF003FFBDA /* SCDream1.otf in Resources */,
 				0A9BEA4F2890DD8B003FFBDA /* LaunchScreen.storyboard in Resources */,
 				0A9BEA5B2890E4DF003FFBDA /* ListTableViewCell.xib in Resources */,
+				0A9BEA6D289384DF003FFBDA /* SCDream5.otf in Resources */,
+				0A9BEA6E289384DF003FFBDA /* SCDream9.otf in Resources */,
 				0A9BEA4C2890DD8B003FFBDA /* Assets.xcassets in Resources */,
 				0A9BEA4A2890DD89003FFBDA /* Main.storyboard in Resources */,
 			);
@@ -181,6 +204,7 @@
 				0A9BEA432890DD89003FFBDA /* AppDelegate.swift in Sources */,
 				0A9BEA572890E1F2003FFBDA /* SearchViewController.swift in Sources */,
 				0A9BEA602892237B003FFBDA /* LottoViewController.swift in Sources */,
+				0A9BEA6728935D53003FFBDA /* LocationViewController.swift in Sources */,
 				0A9BEA5E28920CD6003FFBDA /* ViewPresentableProtocol.swift in Sources */,
 				0A9BEA622892304F003FFBDA /* TranslateViewController.swift in Sources */,
 				0A9BEA452890DD89003FFBDA /* SceneDelegate.swift in Sources */,
@@ -331,6 +355,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JZ9V99JF7T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Network/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -358,6 +383,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JZ9V99JF7T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Network/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
