@@ -8,12 +8,22 @@
 import UIKit
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // 2. 노티 제거
+        // 알람 앱 미리알림 스케줄 할일 목록 > 하루 전 알림 30분 전 알림
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+        
+        
+        
+        UNUserNotificationCenter.current().delegate = self
+        
+        
         return true
     }
 
