@@ -23,8 +23,12 @@ class LottoViewController: UIViewController {
         lottoPickerView.delegate = self
         lottoPickerView.dataSource = self
         
+        numberTextField.textContentType = .oneTimeCode  // 인증번호 자동완성
+        
         numberTextField.inputView = lottoPickerView  // 가장 쉽게 키보드 안 나오게 하는 방법
         numberTextField.tintColor = .clear
+        
+        numberTextField.delegate = self
     }
     
     
@@ -44,6 +48,9 @@ class LottoViewController: UIViewController {
 //        return "\(row)번째 행"
 //    }
     
+    @IBAction func textFieldTouchedDown(_ sender: UITextField) {
+        numberTextField.isSelected = false
+    }
 }
 
 
@@ -67,5 +74,17 @@ extension LottoViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return "\(numberList[row])회차"
+    }
+}
+
+
+extension LottoViewController: UITextFieldDelegate {
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        numberTextField.isUserInteractionEnabled = false
+        return true
+    }
+
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        numberTextField.isUserInteractionEnabled = true
     }
 }
