@@ -7,7 +7,11 @@
 
 import UIKit
 
+//class LocationViewController: UIViewController, ReusableViewProtocol {
 class LocationViewController: UIViewController {
+    
+//    static var resueIdentifier: String = String(describing: LocationViewController.self)
+    //LocationViewController.self 메타 타입 => "LocationViewController"
 
     // Notification 1.
     // UN - User Notification

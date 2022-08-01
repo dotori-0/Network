@@ -8,7 +8,12 @@
 import UIKit
 import WebKit
 
+//class WebViewController: UIViewController, ReusableViewProtocol {
 class WebViewController: UIViewController {
+    
+//    static let resueIdentifier = "WebViewController"
+//    static let resueIdentifier = String(describing: WebViewController.self)  // WebViewController
+    
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var webView: WKWebView!

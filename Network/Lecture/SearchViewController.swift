@@ -43,7 +43,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         // 테이블뷰가 사용할 테이블뷰 셀 등록
         // XIB: Xml Interface Builder <= 예전에는 Nib이라는 파일을 사용했음
-        searchTableView.register(UINib(nibName: ListTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: ListTableViewCell.identifier)
+        searchTableView.register(UINib(nibName: ListTableViewCell.resueIdentifier, bundle: nil), forCellReuseIdentifier: ListTableViewCell.resueIdentifier)
     }
     
     
@@ -67,7 +67,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: ListTableViewCell.identifier, for: indexPath) as? ListTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ListTableViewCell.resueIdentifier, for: indexPath) as? ListTableViewCell else { return UITableViewCell() }
         
         cell.titleLabel.font = .boldSystemFont(ofSize: 22)
         cell.titleLabel.text = "HELLO"
