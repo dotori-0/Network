@@ -5,7 +5,11 @@
 //  Created by SC on 2022/07/28.
 //
 
-import UIKit
+import UIKit  // 애플 내부 프레임워크 먼저
+// 1. import
+import Alamofire  // 엔터치고 외부 프레임워크 알파벳 순서대로
+import SwiftyJSON
+
 
 class LottoViewController: UIViewController {
 
@@ -29,24 +33,35 @@ class LottoViewController: UIViewController {
         numberTextField.tintColor = .clear
         
         numberTextField.delegate = self
+        
+        requestLotto(number: 1025)
     }
     
-    
-//    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-//        return 4
-//    }
-//
-//    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-//        return component == 0 ? 10 : 20
-//    }
-//
-//    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-//        print(component, row)
-//    }
-//
-//    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-//        return "\(row)번째 행"
-//    }
+    func requestLotto(number: Int) {
+        // AF: 200~299 status code - success
+        let url = "https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=\(number)"
+        AF.request(url, method: .get).validate(statusCode: 200..<400).responseJSON { response in  // Alamofire에서 AF로 바뀜
+            switch response.result {
+            case .success(let value):
+                    print("==3==")
+                let json = JSON(value)
+                print("JSON: \(json)")
+                    
+                let bonus = json["bnusNo"].intValue
+                print(bonus)
+                    
+                let date = json["drwNoDate"].stringValue
+                print(date)
+                
+                print("==4==")
+                self.numberTextField.text = date
+                print("==5==")
+                    
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
     
     @IBAction func textFieldTouchedDown(_ sender: UITextField) {
         numberTextField.isSelected = false
@@ -68,8 +83,11 @@ extension LottoViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
 //        print(component, row)
+        print("==0==")
+        requestLotto(number: numberList[row])
+        print("==1==")
         numberTextField.text = "\(numberList[row])회차"
-        
+        print("==2==")
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
