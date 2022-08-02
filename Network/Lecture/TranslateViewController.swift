@@ -7,6 +7,9 @@
 
 import UIKit
 
+import Alamofire
+import SwiftyJSON
+
 // UIButton, UITextField > Action 연결 가능
 // UITextView, UISearchBar, UIPickerView > 액션 연결 불가능
 // UIControl 때문
@@ -15,6 +18,7 @@ import UIKit
 class TranslateViewController: UIViewController {
 
     @IBOutlet weak var userInputTextView: UITextView!
+    @IBOutlet weak var resultTextView: UITextView!
     
     let textViewPlaceholderText = "번역하고 싶은 문장을 입력해 주세요"
     
@@ -35,10 +39,51 @@ class TranslateViewController: UIViewController {
         
         // 커스텀 폰트
         userInputTextView.font = UIFont(name: "S-CoreDream-5Medium", size: 17)
+        
+
     }
     
     
-
+    func requestTranslatedData() {
+        let url = Endpoint.translateURL
+        
+        let text = userInputTextView.text
+        let parameters = ["source": "ko", "target": "en", "text": text]
+        
+        let headers: HTTPHeaders = ["X-Naver-Client-Id": APIKey.NAVER_ID, "X-Naver-Client-Secret": APIKey.NAVER_SECRET]
+        
+        AF.request(url, method: .post, parameters: parameters, headers: headers).validate(statusCode: 200...500).responseJSON { response in
+            switch response.result {
+                case .success(let value):
+                    let json = JSON(value)
+                    print("JSON: \(json)")
+                    
+                    let statusCode = response.response?.statusCode ?? 500
+                    let result = json["message"]["result"]["translatedText"].stringValue
+                    print(statusCode)
+                    
+                    if statusCode == 200 {
+                        self.resultTextView.text = result
+                    } else {
+                        self.resultTextView.text = json["errorMessage"].stringValue
+                    }
+                    
+                    
+                    print(result)
+                    
+//                    self.resultTextView.text = result
+                    
+                case .failure(let error):
+                    print(error)
+            }
+        }
+    }
+    
+    
+    @IBAction func translateButtonClicked(_ sender: UIButton) {
+        requestTranslatedData()
+    }
+    
 }
 
 extension TranslateViewController: UITextViewDelegate {

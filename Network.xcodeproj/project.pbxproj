@@ -11,6 +11,8 @@
 		0A04D86E289823430083AD24 /* Beer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A04D86D289823430083AD24 /* Beer.storyboard */; };
 		0A04D870289823540083AD24 /* RandomBeerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A04D86F289823540083AD24 /* RandomBeerViewController.swift */; };
 		0A04D873289823A50083AD24 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 0A04D872289823A50083AD24 /* Kingfisher */; };
+		0A1309D72898F4EC00B1CCB5 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1309D62898F4EC00B1CCB5 /* APIKey.swift */; };
+		0A23E6BC2898BD23002DFACA /* BoxOfficeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23E6BB2898BD23002DFACA /* BoxOfficeModel.swift */; };
 		0A2E29F32897527E004F40F0 /* ReusableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2E29F22897527E004F40F0 /* ReusableViewProtocol.swift */; };
 		0A2E29F628975798004F40F0 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2E29F528975798004F40F0 /* Constant.swift */; };
 		0A2E29F828975FA4004F40F0 /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2E29F728975FA4004F40F0 /* UserDefaultsHelper.swift */; };
@@ -37,6 +39,8 @@
 /* Begin PBXFileReference section */
 		0A04D86D289823430083AD24 /* Beer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Beer.storyboard; sourceTree = "<group>"; };
 		0A04D86F289823540083AD24 /* RandomBeerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomBeerViewController.swift; sourceTree = "<group>"; };
+		0A1309D62898F4EC00B1CCB5 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		0A23E6BB2898BD23002DFACA /* BoxOfficeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOfficeModel.swift; sourceTree = "<group>"; };
 		0A2E29F22897527E004F40F0 /* ReusableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewProtocol.swift; sourceTree = "<group>"; };
 		0A2E29F528975798004F40F0 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		0A2E29F728975FA4004F40F0 /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
@@ -84,9 +88,18 @@
 			path = Beer;
 			sourceTree = "<group>";
 		};
+		0A23E6BA2898BD11002DFACA /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				0A23E6BB2898BD23002DFACA /* BoxOfficeModel.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		0A2E29F42897578E004F40F0 /* Constant */ = {
 			isa = PBXGroup;
 			children = (
+				0A1309D62898F4EC00B1CCB5 /* APIKey.swift */,
 				0A2E29F528975798004F40F0 /* Constant.swift */,
 				0A2E29F728975FA4004F40F0 /* UserDefaultsHelper.swift */,
 			);
@@ -141,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				0A9BEA562890E1F2003FFBDA /* SearchViewController.swift */,
+				0A23E6BA2898BD11002DFACA /* Data */,
 				0A9BEA582890E4DF003FFBDA /* ListTableViewCell.swift */,
 				0A9BEA592890E4DF003FFBDA /* ListTableViewCell.xib */,
 				0A9BEA5F2892237B003FFBDA /* LottoViewController.swift */,
@@ -250,12 +264,14 @@
 				0A9BEA472890DD89003FFBDA /* ViewController.swift in Sources */,
 				0A04D870289823540083AD24 /* RandomBeerViewController.swift in Sources */,
 				0A2E29F828975FA4004F40F0 /* UserDefaultsHelper.swift in Sources */,
+				0A23E6BC2898BD23002DFACA /* BoxOfficeModel.swift in Sources */,
 				0A9BEA6428923AA0003FFBDA /* WebViewController.swift in Sources */,
 				0A9BEA432890DD89003FFBDA /* AppDelegate.swift in Sources */,
 				0A9BEA572890E1F2003FFBDA /* SearchViewController.swift in Sources */,
 				0A9BEA602892237B003FFBDA /* LottoViewController.swift in Sources */,
 				0A9BEA6728935D53003FFBDA /* LocationViewController.swift in Sources */,
 				0A9BEA5E28920CD6003FFBDA /* ViewPresentableProtocol.swift in Sources */,
+				0A1309D72898F4EC00B1CCB5 /* APIKey.swift in Sources */,
 				0A9BEA622892304F003FFBDA /* TranslateViewController.swift in Sources */,
 				0A9BEA452890DD89003FFBDA /* SceneDelegate.swift in Sources */,
 				0A2E29F32897527E004F40F0 /* ReusableViewProtocol.swift in Sources */,

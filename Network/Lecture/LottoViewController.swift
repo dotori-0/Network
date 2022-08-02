@@ -39,7 +39,7 @@ class LottoViewController: UIViewController {
     
     func requestLotto(number: Int) {
         // AF: 200~299 status code - success
-        let url = "https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=\(number)"
+        let url = "\(Endpoint.lotteryURL)&drwNo=\(number)"
         AF.request(url, method: .get).validate(statusCode: 200..<400).responseJSON { response in  // Alamofire에서 AF로 바뀜
             switch response.result {
             case .success(let value):
