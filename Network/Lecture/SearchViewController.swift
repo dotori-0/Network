@@ -53,9 +53,11 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         // 테이블뷰가 사용할 테이블뷰 셀 등록
         // XIB: Xml Interface Builder <= 예전에는 Nib이라는 파일을 사용했음
-        searchTableView.register(UINib(nibName: ListTableViewCell.resueIdentifier, bundle: nil), forCellReuseIdentifier: ListTableViewCell.resueIdentifier)
+        searchTableView.register(UINib(nibName: ListTableViewCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: ListTableViewCell.reuseIdentifier)
+        searchTableView.register(UINib(nibName: HeaderTableViewCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: HeaderTableViewCell.reuseIdentifier)
         
         searchBar.delegate = self
+        searchBar.keyboardType = .numberPad
         
         requestBoxOffice(text: "20220801")
     }
@@ -89,12 +91,13 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
 //                    self.list.removeAll()  // 두 번째 방법  // 둘 중 뭐가 더 낫다고 하기 어렵다
                     
                     for movie in json["boxOfficeResult"]["dailyBoxOfficeList"].arrayValue {
-                        let movieNm = movie["movieNm"].stringValue
-                        let openDt = movie["openDt"].stringValue
-                        let audiChange = movie["audiChange"].stringValue
-                        let rank = movie["rank"].stringValue
-                        
-                        let data = BoxOfficeModel(movieTitle: movieNm, releaseDate: openDt, totalCount: audiChange, rank: rank)
+                        let rank = movie["rank"].stringValue  // 순위
+                        let movieNm = movie["movieNm"].stringValue  // 영화 이름
+                        let openDt = movie["openDt"].stringValue  // 개봉일
+                        let audiAcc = movie["audiAcc"].stringValue  // 누적관객수
+                        let showCnt = movie["showCnt"].stringValue  // 해당 일자 상영 횟수
+
+                        let data = BoxOfficeModel(rank: rank, movieTitle: movieNm, releaseDate: openDt, totalCount: audiAcc, showCount: showCnt)
                         
                         self.list.append(data)
                     }
@@ -121,22 +124,41 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     
+    // MARK: - Table View Configuration
 
 //    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //            Method does not override any method from its superclass
 //      UITableViewController 라면 재정의가 맞지만, UIViewController 상속이기 때문에 재정의 X
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return list.count
+        return list.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: ListTableViewCell.resueIdentifier, for: indexPath) as? ListTableViewCell else { return UITableViewCell() }
-        
-        cell.backgroundColor = .clear
-        cell.titleLabel.font = .boldSystemFont(ofSize: 22)
-        cell.titleLabel.text = "\(list[indexPath.row].movieTitle): \(list[indexPath.row].releaseDate)"
-        
-        return cell
+        if indexPath.row == 0 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: HeaderTableViewCell.reuseIdentifier, for: indexPath) as? HeaderTableViewCell else { return UITableViewCell() }
+            
+            cell.designLabels()
+            
+            return cell
+        } else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: ListTableViewCell.reuseIdentifier, for: indexPath) as? ListTableViewCell else { return UITableViewCell() }
+            
+            cell.backgroundColor = .clear
+            cell.designLabels()
+    //        cell.titleLabel.font = .boldSystemFont(ofSize: 22)
+    //        cell.titleLabel.text = "\(list[indexPath.row].movieTitle): \(list[indexPath.row].releaseDate)"
+            cell.updateLabelTexts(data: list[indexPath.row - 1])
+            
+            return cell
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 0 {
+            return 24
+        } else {
+            return 44
+        }
     }
 }
 

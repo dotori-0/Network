@@ -12,6 +12,8 @@
 		0A04D870289823540083AD24 /* RandomBeerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A04D86F289823540083AD24 /* RandomBeerViewController.swift */; };
 		0A04D873289823A50083AD24 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 0A04D872289823A50083AD24 /* Kingfisher */; };
 		0A1309D72898F4EC00B1CCB5 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1309D62898F4EC00B1CCB5 /* APIKey.swift */; };
+		0A1309D928995C3E00B1CCB5 /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1309D828995C3E00B1CCB5 /* HeaderTableViewCell.swift */; };
+		0A1309DD28995D9500B1CCB5 /* HeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A1309DC28995D9500B1CCB5 /* HeaderTableViewCell.xib */; };
 		0A23E6BC2898BD23002DFACA /* BoxOfficeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23E6BB2898BD23002DFACA /* BoxOfficeModel.swift */; };
 		0A2E29F32897527E004F40F0 /* ReusableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2E29F22897527E004F40F0 /* ReusableViewProtocol.swift */; };
 		0A2E29F628975798004F40F0 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2E29F528975798004F40F0 /* Constant.swift */; };
@@ -40,6 +42,8 @@
 		0A04D86D289823430083AD24 /* Beer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Beer.storyboard; sourceTree = "<group>"; };
 		0A04D86F289823540083AD24 /* RandomBeerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomBeerViewController.swift; sourceTree = "<group>"; };
 		0A1309D62898F4EC00B1CCB5 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		0A1309D828995C3E00B1CCB5 /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
+		0A1309DC28995D9500B1CCB5 /* HeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderTableViewCell.xib; sourceTree = "<group>"; };
 		0A23E6BB2898BD23002DFACA /* BoxOfficeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOfficeModel.swift; sourceTree = "<group>"; };
 		0A2E29F22897527E004F40F0 /* ReusableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewProtocol.swift; sourceTree = "<group>"; };
 		0A2E29F528975798004F40F0 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -154,9 +158,11 @@
 			isa = PBXGroup;
 			children = (
 				0A9BEA562890E1F2003FFBDA /* SearchViewController.swift */,
-				0A23E6BA2898BD11002DFACA /* Data */,
+				0A1309D828995C3E00B1CCB5 /* HeaderTableViewCell.swift */,
+				0A1309DC28995D9500B1CCB5 /* HeaderTableViewCell.xib */,
 				0A9BEA582890E4DF003FFBDA /* ListTableViewCell.swift */,
 				0A9BEA592890E4DF003FFBDA /* ListTableViewCell.xib */,
+				0A23E6BA2898BD11002DFACA /* Data */,
 				0A9BEA5F2892237B003FFBDA /* LottoViewController.swift */,
 				0A9BEA612892304F003FFBDA /* TranslateViewController.swift */,
 				0A9BEA6328923AA0003FFBDA /* WebViewController.swift */,
@@ -244,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A9BEA6C289384DF003FFBDA /* SCDream1.otf in Resources */,
+				0A1309DD28995D9500B1CCB5 /* HeaderTableViewCell.xib in Resources */,
 				0A9BEA4F2890DD8B003FFBDA /* LaunchScreen.storyboard in Resources */,
 				0A9BEA5B2890E4DF003FFBDA /* ListTableViewCell.xib in Resources */,
 				0A9BEA6D289384DF003FFBDA /* SCDream5.otf in Resources */,
@@ -275,6 +282,7 @@
 				0A9BEA622892304F003FFBDA /* TranslateViewController.swift in Sources */,
 				0A9BEA452890DD89003FFBDA /* SceneDelegate.swift in Sources */,
 				0A2E29F32897527E004F40F0 /* ReusableViewProtocol.swift in Sources */,
+				0A1309D928995C3E00B1CCB5 /* HeaderTableViewCell.swift in Sources */,
 				0A9BEA5A2890E4DF003FFBDA /* ListTableViewCell.swift in Sources */,
 				0A2E29F628975798004F40F0 /* Constant.swift in Sources */,
 			);

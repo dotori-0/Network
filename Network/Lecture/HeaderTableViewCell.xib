@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderTableViewCell" rowHeight="44" id="a3d-pK-Ubc" customClass="HeaderTableViewCell" customModule="Network" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="a3d-pK-Ubc" id="J3i-xP-xNz">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="순위" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LbF-ZW-8u0">
+                        <rect key="frame" x="12" y="15" width="19" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="영화 제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pCw-nt-QkV">
+                        <rect key="frame" x="43" y="15" width="45" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="개봉일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KzI-Op-HHl">
+                        <rect key="frame" x="169.5" y="15" width="51.5" height="14"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="누적관객수" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWA-tO-M3S">
+                        <rect key="frame" x="229" y="15" width="38" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="상영횟수" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9d-qU-YTk">
+                        <rect key="frame" x="275" y="15" width="29" height="14"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="n9d-qU-YTk" secondAttribute="trailing" constant="16" id="Ohw-Pv-sZc"/>
+                    <constraint firstItem="n9d-qU-YTk" firstAttribute="width" secondItem="J3i-xP-xNz" secondAttribute="width" multiplier="0.09" id="SkY-tA-EV8"/>
+                    <constraint firstItem="LbF-ZW-8u0" firstAttribute="leading" secondItem="J3i-xP-xNz" secondAttribute="leading" constant="12" id="TIY-jz-HyX"/>
+                    <constraint firstItem="pCw-nt-QkV" firstAttribute="centerY" secondItem="J3i-xP-xNz" secondAttribute="centerY" id="UgE-QO-25a"/>
+                    <constraint firstItem="pCw-nt-QkV" firstAttribute="leading" secondItem="LbF-ZW-8u0" secondAttribute="trailing" constant="12" id="aGY-wZ-ezs"/>
+                    <constraint firstItem="gWA-tO-M3S" firstAttribute="width" secondItem="J3i-xP-xNz" secondAttribute="width" multiplier="0.12" id="ejo-Kl-Fxv"/>
+                    <constraint firstItem="KzI-Op-HHl" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="pCw-nt-QkV" secondAttribute="trailing" constant="8" id="g3j-IT-0Py"/>
+                    <constraint firstItem="n9d-qU-YTk" firstAttribute="centerY" secondItem="J3i-xP-xNz" secondAttribute="centerY" id="gGF-zJ-unR"/>
+                    <constraint firstItem="n9d-qU-YTk" firstAttribute="leading" secondItem="gWA-tO-M3S" secondAttribute="trailing" constant="8" id="h3R-jf-hee"/>
+                    <constraint firstItem="KzI-Op-HHl" firstAttribute="width" secondItem="J3i-xP-xNz" secondAttribute="width" multiplier="0.16" id="hca-Gr-v7D"/>
+                    <constraint firstItem="gWA-tO-M3S" firstAttribute="centerY" secondItem="J3i-xP-xNz" secondAttribute="centerY" id="jAr-PY-8GM"/>
+                    <constraint firstItem="LbF-ZW-8u0" firstAttribute="width" secondItem="J3i-xP-xNz" secondAttribute="width" multiplier="0.06" id="jU6-Le-ZtU"/>
+                    <constraint firstItem="gWA-tO-M3S" firstAttribute="leading" secondItem="KzI-Op-HHl" secondAttribute="trailing" constant="8" id="jWX-mS-m9O"/>
+                    <constraint firstItem="KzI-Op-HHl" firstAttribute="centerY" secondItem="J3i-xP-xNz" secondAttribute="centerY" id="wtk-BF-1Aj"/>
+                    <constraint firstItem="LbF-ZW-8u0" firstAttribute="centerY" secondItem="J3i-xP-xNz" secondAttribute="centerY" id="zSD-ai-6dL"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="rankHeaderLabel" destination="LbF-ZW-8u0" id="33M-Nv-xMI"/>
+                <outlet property="releaseDateHeaderLabel" destination="KzI-Op-HHl" id="I3u-66-BzX"/>
+                <outlet property="showCountHeaderLabel" destination="n9d-qU-YTk" id="hcp-tM-HUS"/>
+                <outlet property="titleHeaderLabel" destination="pCw-nt-QkV" id="Fd4-aF-mRo"/>
+                <outlet property="totalCountHeaderLabel" destination="gWA-tO-M3S" id="8Tv-2Y-1dU"/>
+            </connections>
+            <point key="canvasLocation" x="90" y="58"/>
+        </tableViewCell>
+    </objects>
+</document>
