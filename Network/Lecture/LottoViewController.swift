@@ -15,11 +15,15 @@ class LottoViewController: UIViewController {
 
     @IBOutlet weak var numberTextField: UITextField!
 //    @IBOutlet weak var lottoPickerView: UIPickerView!
+    @IBOutlet var winningNumberLabels: [UILabel]!
     
     var lottoPickerView = UIPickerView()
     // 코드로 뷰를 만드는 기능이 훨씬 더 많이 남아있음!!
     
     let numberList: [Int] = Array(1...1025).reversed()
+    var winningNumbers: [Int] = []
+    
+    let winningNumberKeys = ["drwtNo1", "drwtNo2", "drwtNo3", "drwtNo4", "drwtNo5", "drwtNo6", "bnusNo"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,28 +42,42 @@ class LottoViewController: UIViewController {
     }
     
     func requestLotto(number: Int) {
+        winningNumbers.removeAll()
+        
         // AF: 200~299 status code - success
         let url = "\(Endpoint.lotteryURL)&drwNo=\(number)"
         AF.request(url, method: .get).validate(statusCode: 200..<400).responseJSON { response in  // Alamofire에서 AF로 바뀜
             switch response.result {
-            case .success(let value):
+                case .success(let value):
                     print("==3==")
-                let json = JSON(value)
-                print("JSON: \(json)")
+                    let json = JSON(value)
+                    print("JSON: \(json)")
                     
-                let bonus = json["bnusNo"].intValue
-                print(bonus)
+                    let bonus = json["bnusNo"].intValue
+                    let date = json["drwNoDate"].stringValue
+                    print(bonus, date)
                     
-                let date = json["drwNoDate"].stringValue
-                print(date)
-                
-                print("==4==")
-                self.numberTextField.text = date
-                print("==5==")
+                    for key in self.winningNumberKeys {
+                        self.winningNumbers.append(json[key].intValue)
+                    }
                     
-            case .failure(let error):
-                print(error)
+                    print(self.winningNumbers)
+                    
+                    self.updateWinningNumberLabels()
+                    
+                    print("==4==")
+                    self.numberTextField.text = date
+                    print("==5==")
+                    
+                case .failure(let error):
+                    print(error)
             }
+        }
+    }
+    
+    func updateWinningNumberLabels() {
+        for i in 0..<winningNumbers.count {
+            winningNumberLabels[i].text = "\(winningNumbers[i])"
         }
     }
     
