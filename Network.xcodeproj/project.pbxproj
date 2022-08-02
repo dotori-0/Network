@@ -14,6 +14,9 @@
 		0A1309D72898F4EC00B1CCB5 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1309D62898F4EC00B1CCB5 /* APIKey.swift */; };
 		0A1309D928995C3E00B1CCB5 /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1309D828995C3E00B1CCB5 /* HeaderTableViewCell.swift */; };
 		0A1309DD28995D9500B1CCB5 /* HeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A1309DC28995D9500B1CCB5 /* HeaderTableViewCell.xib */; };
+		0A1309E228996D4800B1CCB5 /* BeerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1309E028996D4800B1CCB5 /* BeerCollectionViewCell.swift */; };
+		0A1309E328996D4800B1CCB5 /* BeerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A1309E128996D4800B1CCB5 /* BeerCollectionViewCell.xib */; };
+		0A1309E528996DC000B1CCB5 /* BeerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1309E428996DC000B1CCB5 /* BeerViewController.swift */; };
 		0A23E6BC2898BD23002DFACA /* BoxOfficeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A23E6BB2898BD23002DFACA /* BoxOfficeModel.swift */; };
 		0A2E29F32897527E004F40F0 /* ReusableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2E29F22897527E004F40F0 /* ReusableViewProtocol.swift */; };
 		0A2E29F628975798004F40F0 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2E29F528975798004F40F0 /* Constant.swift */; };
@@ -44,6 +47,9 @@
 		0A1309D62898F4EC00B1CCB5 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		0A1309D828995C3E00B1CCB5 /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
 		0A1309DC28995D9500B1CCB5 /* HeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderTableViewCell.xib; sourceTree = "<group>"; };
+		0A1309E028996D4800B1CCB5 /* BeerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerCollectionViewCell.swift; sourceTree = "<group>"; };
+		0A1309E128996D4800B1CCB5 /* BeerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeerCollectionViewCell.xib; sourceTree = "<group>"; };
+		0A1309E428996DC000B1CCB5 /* BeerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerViewController.swift; sourceTree = "<group>"; };
 		0A23E6BB2898BD23002DFACA /* BoxOfficeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOfficeModel.swift; sourceTree = "<group>"; };
 		0A2E29F22897527E004F40F0 /* ReusableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewProtocol.swift; sourceTree = "<group>"; };
 		0A2E29F528975798004F40F0 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -88,6 +94,9 @@
 			children = (
 				0A04D86D289823430083AD24 /* Beer.storyboard */,
 				0A04D86F289823540083AD24 /* RandomBeerViewController.swift */,
+				0A1309E428996DC000B1CCB5 /* BeerViewController.swift */,
+				0A1309E028996D4800B1CCB5 /* BeerCollectionViewCell.swift */,
+				0A1309E128996D4800B1CCB5 /* BeerCollectionViewCell.xib */,
 			);
 			path = Beer;
 			sourceTree = "<group>";
@@ -129,12 +138,12 @@
 		0A9BEA412890DD89003FFBDA /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				0A04D86C289823190083AD24 /* Beer */,
 				0A2E29F42897578E004F40F0 /* Constant */,
 				0A9BEA422890DD89003FFBDA /* AppDelegate.swift */,
 				0A9BEA442890DD89003FFBDA /* SceneDelegate.swift */,
 				0A9BEA462890DD89003FFBDA /* ViewController.swift */,
 				0A9BEA482890DD89003FFBDA /* Main.storyboard */,
+				0A04D86C289823190083AD24 /* Beer */,
 				0A9BEA652892624B003FFBDA /* Lecture */,
 				0A9BEA5C28920CA3003FFBDA /* Protocol */,
 				0A9BEA68289383F5003FFBDA /* Resource */,
@@ -255,6 +264,7 @@
 				0A9BEA5B2890E4DF003FFBDA /* ListTableViewCell.xib in Resources */,
 				0A9BEA6D289384DF003FFBDA /* SCDream5.otf in Resources */,
 				0A04D86E289823430083AD24 /* Beer.storyboard in Resources */,
+				0A1309E328996D4800B1CCB5 /* BeerCollectionViewCell.xib in Resources */,
 				0A9BEA6E289384DF003FFBDA /* SCDream9.otf in Resources */,
 				0A9BEA4C2890DD8B003FFBDA /* Assets.xcassets in Resources */,
 				0A9BEA4A2890DD89003FFBDA /* Main.storyboard in Resources */,
@@ -272,7 +282,9 @@
 				0A04D870289823540083AD24 /* RandomBeerViewController.swift in Sources */,
 				0A2E29F828975FA4004F40F0 /* UserDefaultsHelper.swift in Sources */,
 				0A23E6BC2898BD23002DFACA /* BoxOfficeModel.swift in Sources */,
+				0A1309E528996DC000B1CCB5 /* BeerViewController.swift in Sources */,
 				0A9BEA6428923AA0003FFBDA /* WebViewController.swift in Sources */,
+				0A1309E228996D4800B1CCB5 /* BeerCollectionViewCell.swift in Sources */,
 				0A9BEA432890DD89003FFBDA /* AppDelegate.swift in Sources */,
 				0A9BEA572890E1F2003FFBDA /* SearchViewController.swift in Sources */,
 				0A9BEA602892237B003FFBDA /* LottoViewController.swift in Sources */,

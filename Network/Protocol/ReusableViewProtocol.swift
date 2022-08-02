@@ -25,3 +25,9 @@ extension UITableViewCell: ReusableViewProtocol {
         return String(describing: self)  // 자기 자신의 클래스를 스트링으로 만들어 준다
     }
 }
+
+extension UICollectionViewCell: ReusableViewProtocol {
+    static var reuseIdentifier: String {
+        return String(describing: self)
+    }
+}
