@@ -43,6 +43,12 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
 //    var list: [String] = []
     var list: [BoxOfficeModel] = []
     
+    // 타입 어노테이션 vs 타입 추론 -> 누가 속도가 더 빠를까?
+    // WWDC - What's new in Swift: 타입추론 알고리즘 개선
+    var nickname: String = ""
+    var username = ""
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -59,7 +65,25 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         searchBar.delegate = self
         searchBar.keyboardType = .numberPad
         
-        requestBoxOffice(text: "20220801")
+        // Date, DateFormatter, Calendar 찾아보기
+        // Calendar는 국가별/사용자가 있는 지역에 대응하기 때문에 Calendar를 권장한다
+        // 사용자의 여러 국가나 지역별 상황에서 달라질 수 있는 날짜 타입들을 명확한 형태로 연산
+        let format = DateFormatter()
+        format.dateFormat = "yyyyMMdd"  // TMI - "yyyyMMdd" "YYYYMMdd" 차이점 찾아보기 - 마지막주는 2023년이 될 것
+//        let dateResult = Date(timeIntervalSinceNow: -86400)
+        
+        // Calendar 활용
+//        let yesterday = Calendar.current.date(byAdding: .day, value: -1, to: .now)
+        let yesterday = Calendar.current.date(byAdding: .day, value: -1, to: Date())
+        let dateResult = format.string(from: yesterday!)
+        
+        // 네트워크 통신: 서버 점검 등에 대한 예외 처리
+        // 네트워크가 느린 환경 테스트: 실기기 테스트 시 Condition 조절 가능!
+        // 시뮬레이터에서도 가능! (추가 설치 필요)(권장하지는 않음, 실기기 권장)
+        
+        
+//        requestBoxOffice(text: "20220801")
+        requestBoxOffice(text: dateResult)  // 실행한 날의 하루 전 날
     }
     
     
