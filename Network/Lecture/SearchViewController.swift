@@ -98,7 +98,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func requestBoxOffice(text: String) {
-        
+        print("requestBoxOffice starting")
         list.removeAll()  // 첫 번째 방법  // 로딩바를 띄워 준다면 받아오는구나 할 수 있다
         // 검색하면 다 지우는 게 더 나은 방법일 수 있다
         
@@ -158,6 +158,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        print(indexPath.row)
         if indexPath.row == 0 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: HeaderTableViewCell.reuseIdentifier, for: indexPath) as? HeaderTableViewCell else { return UITableViewCell() }
             
