@@ -334,7 +334,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pyK-cG-sCp">
-                                <rect key="frame" x="0.0" y="95" width="414" height="767"/>
+                                <rect key="frame" x="0.0" y="95" width="414" height="801"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="R7g-pe-yUI">
                                     <size key="itemSize" width="128" height="128"/>
@@ -351,7 +351,7 @@
                             <constraint firstItem="zFX-hz-Er1" firstAttribute="centerX" secondItem="Fju-fm-4FX" secondAttribute="centerX" id="CoC-yg-Ncb"/>
                             <constraint firstItem="zFX-hz-Er1" firstAttribute="top" secondItem="rLF-f8-jxw" secondAttribute="top" id="FaK-9M-bXr"/>
                             <constraint firstItem="zFX-hz-Er1" firstAttribute="width" secondItem="Fju-fm-4FX" secondAttribute="width" id="Jht-6u-cc0"/>
-                            <constraint firstItem="rLF-f8-jxw" firstAttribute="bottom" secondItem="pyK-cG-sCp" secondAttribute="bottom" id="RAh-99-sBP"/>
+                            <constraint firstAttribute="bottom" secondItem="pyK-cG-sCp" secondAttribute="bottom" id="RAh-99-sBP"/>
                             <constraint firstItem="pyK-cG-sCp" firstAttribute="leading" secondItem="rLF-f8-jxw" secondAttribute="leading" id="kpG-Fc-CZX"/>
                             <constraint firstItem="pyK-cG-sCp" firstAttribute="top" secondItem="zFX-hz-Er1" secondAttribute="bottom" id="oWh-16-C9s"/>
                             <constraint firstItem="rLF-f8-jxw" firstAttribute="trailing" secondItem="pyK-cG-sCp" secondAttribute="trailing" id="xDB-H1-Yuj"/>
@@ -359,6 +359,7 @@
                     </view>
                     <connections>
                         <outlet property="imageCollectionView" destination="pyK-cG-sCp" id="LXz-Fz-5RB"/>
+                        <outlet property="searchBar" destination="zFX-hz-Er1" id="R97-kS-LdF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q0T-hK-byG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -367,9 +368,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrow.left" catalog="system" width="32" height="32"/>
-        <image name="arrow.right" catalog="system" width="32" height="32"/>
-        <image name="plus" catalog="system" width="32" height="32"/>
+        <image name="arrow.left" catalog="system" width="128" height="98"/>
+        <image name="arrow.right" catalog="system" width="128" height="98"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

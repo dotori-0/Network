@@ -8,6 +8,7 @@
 import UIKit
 
 import Alamofire
+import JGProgressHUD
 import SwiftyJSON
 
 /*
@@ -47,6 +48,8 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     // WWDC - What's new in Swift: 타입추론 알고리즘 개선
     var nickname: String = ""
     var username = ""
+    
+    let hud = JGProgressHUD()
     
     
     override func viewDidLoad() {
@@ -98,6 +101,8 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func requestBoxOffice(text: String) {
+        hud.show(in: view)
+        
         print("requestBoxOffice starting")
         list.removeAll()  // 첫 번째 방법  // 로딩바를 띄워 준다면 받아오는구나 할 수 있다
         // 검색하면 다 지우는 게 더 나은 방법일 수 있다
@@ -105,12 +110,14 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         // AF: 200~299 status code - success
         // 인증키: 박스오피스의 경우 3000회 제한
         let url = "\(Endpoint.boxOfficeURL)key=\(APIKey.BOXOFFICE)&targetDt=\(text)"  // ?나 & 등이 중복되지 않도록 주의!
-        AF.request(url, method: .get).validate(statusCode: 200..<400).responseJSON { response in  // Alamofire에서 AF로 바뀜
+        AF.request(url, method: .get).validate(statusCode: 200..<400).responseData { response in  // Alamofire에서 AF로 바뀜
             switch response.result {
                 case .success(let value):
                     print("==3==")
                     let json = JSON(value)
-                    print("JSON: \(json)")
+                    print("value: \(value)")
+                    print(type(of: value))
+//                    print("JSON: \(json)")
                     
 //                    self.list.removeAll()  // 두 번째 방법  // 둘 중 뭐가 더 낫다고 하기 어렵다
                     
@@ -139,12 +146,19 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     
                     // 테이블뷰 갱신
                     self.searchTableView.reloadData()
+                    self.hud.dismiss(animated: true)
                     
                     
                 case .failure(let error):
+                    self.hud.dismiss()  // 네트워크 실패해도 없애 주어야 함
+                    
                     print(error)
+                    
+                    // 시뮬레이터 네트워크 > 맥의 네트워크와 연결이 되어 있다
+                    // 시뮬 네트워크 실패 테스트 > 맥 와이파이 끄면 안 됨!
             }
         }
+//        self.hud.dismiss()  // 이 위치는? 네트워크 통신이 끝나지 않아도 실행되기 때문에 바로 사라져 버린다!
     }
     
     

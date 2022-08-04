@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class HeaderTableViewCell: UITableViewCell {
 
     @IBOutlet weak var rankHeaderLabel: UILabel!

@@ -28,6 +28,7 @@
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" red="0.82941126740000004" green="0.86271431919999997" blue="0.95251156589999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="4NV-9g-3gh" secondAttribute="bottom" id="KkB-ev-jGY"/>
                 <constraint firstItem="4NV-9g-3gh" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="R8O-q0-K9S"/>
