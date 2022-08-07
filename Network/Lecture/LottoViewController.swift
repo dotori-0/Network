@@ -46,12 +46,13 @@ class LottoViewController: UIViewController {
         
         // AF: 200~299 status code - success
         let url = "\(Endpoint.lotteryURL)&drwNo=\(number)"
-        AF.request(url, method: .get).validate(statusCode: 200..<400).responseJSON { response in  // Alamofire에서 AF로 바뀜
+        AF.request(url, method: .get).validate(statusCode: 200..<400).responseData { response in  // Alamofire에서 AF로 바뀜
             switch response.result {
                 case .success(let value):
+                    print("통신! 👻")
                     print("==3==")
                     let json = JSON(value)
-                    print("JSON: \(json)")
+//                    print("JSON: \(json)")
                     
                     let bonus = json["bnusNo"].intValue
                     let date = json["drwNoDate"].stringValue
@@ -62,6 +63,12 @@ class LottoViewController: UIViewController {
                     }
                     
                     print(self.winningNumbers)
+                    
+                    // Userdefaults에 저장
+//                    UserDefaultsHelper.standard.set()
+                    let key = "Draw\(number)"
+                    UserDefaults.standard.set(self.winningNumbers, forKey: key)
+                    UserDefaultsHelper.standard.saveIntArray(key: key, value: self.winningNumbers)
                     
                     self.updateWinningNumberLabels()
                     
@@ -102,7 +109,17 @@ extension LottoViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
 //        print(component, row)
         print("==0==")
-        requestLotto(number: numberList[row])
+        
+        print("❓", UserDefaultsHelper.standard.keyExists(key: "Draw\(numberList[row])"))
+        let keyExists = UserDefaultsHelper.standard.keyExists(key: "Draw\(numberList[row])")
+        if keyExists {
+            winningNumbers = UserDefaultsHelper.standard.getIntArray(key: "Draw\(numberList[row])")
+            print("winningNumbers: \(winningNumbers)")
+            updateWinningNumberLabels()
+        } else {
+            requestLotto(number: numberList[row])
+        }
+        
         print("==1==")
         numberTextField.text = "\(numberList[row])회차"
         print("==2==")

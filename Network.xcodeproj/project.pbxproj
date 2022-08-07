@@ -28,6 +28,8 @@
 		0A7CE7C3289A83C200598A6E /* ImageSearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7CE7C1289A83C200598A6E /* ImageSearchCollectionViewCell.swift */; };
 		0A7CE7C4289A83C200598A6E /* ImageSearchCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A7CE7C2289A83C200598A6E /* ImageSearchCollectionViewCell.xib */; };
 		0A7CE7C6289A9D7B00598A6E /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7CE7C5289A9D7B00598A6E /* ImageModel.swift */; };
+		0A8F41C2289CB3F300AC4B96 /* ImageSearchAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8F41C1289CB3F300AC4B96 /* ImageSearchAPIManager.swift */; };
+		0A8F41C4289CE7C200AC4B96 /* Test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A8F41C3289CE7C200AC4B96 /* Test.storyboard */; };
 		0A9BEA432890DD89003FFBDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9BEA422890DD89003FFBDA /* AppDelegate.swift */; };
 		0A9BEA452890DD89003FFBDA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9BEA442890DD89003FFBDA /* SceneDelegate.swift */; };
 		0A9BEA472890DD89003FFBDA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9BEA462890DD89003FFBDA /* ViewController.swift */; };
@@ -65,6 +67,8 @@
 		0A7CE7C1289A83C200598A6E /* ImageSearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearchCollectionViewCell.swift; sourceTree = "<group>"; };
 		0A7CE7C2289A83C200598A6E /* ImageSearchCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageSearchCollectionViewCell.xib; sourceTree = "<group>"; };
 		0A7CE7C5289A9D7B00598A6E /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
+		0A8F41C1289CB3F300AC4B96 /* ImageSearchAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearchAPIManager.swift; sourceTree = "<group>"; };
+		0A8F41C3289CE7C200AC4B96 /* Test.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Test.storyboard; sourceTree = "<group>"; };
 		0A9BEA3F2890DD89003FFBDA /* Network.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Network.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A9BEA422890DD89003FFBDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A9BEA442890DD89003FFBDA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +138,7 @@
 		0A7CE7BF289A839700598A6E /* ImageSearch */ = {
 			isa = PBXGroup;
 			children = (
+				0A8F41C0289CB3D300AC4B96 /* APIManager */,
 				0A7CE7C0289A839E00598A6E /* Data */,
 				0A579EFE289A095300771BEB /* ImageSearchViewController.swift */,
 				0A7CE7C1289A83C200598A6E /* ImageSearchCollectionViewCell.swift */,
@@ -148,6 +153,14 @@
 				0A7CE7C5289A9D7B00598A6E /* ImageModel.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		0A8F41C0289CB3D300AC4B96 /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+				0A8F41C1289CB3F300AC4B96 /* ImageSearchAPIManager.swift */,
+			);
+			path = APIManager;
 			sourceTree = "<group>";
 		};
 		0A9BEA362890DD89003FFBDA = {
@@ -182,6 +195,7 @@
 				0A9BEA4B2890DD8B003FFBDA /* Assets.xcassets */,
 				0A9BEA4D2890DD8B003FFBDA /* LaunchScreen.storyboard */,
 				0A9BEA502890DD8B003FFBDA /* Info.plist */,
+				0A8F41C3289CE7C200AC4B96 /* Test.storyboard */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -301,6 +315,7 @@
 				0A9BEA5B2890E4DF003FFBDA /* ListTableViewCell.xib in Resources */,
 				0A9BEA6D289384DF003FFBDA /* SCDream5.otf in Resources */,
 				0A04D86E289823430083AD24 /* Beer.storyboard in Resources */,
+				0A8F41C4289CE7C200AC4B96 /* Test.storyboard in Resources */,
 				0A1309E328996D4800B1CCB5 /* BeerCollectionViewCell.xib in Resources */,
 				0A9BEA6E289384DF003FFBDA /* SCDream9.otf in Resources */,
 				0A9BEA4C2890DD8B003FFBDA /* Assets.xcassets in Resources */,
@@ -322,6 +337,7 @@
 				0A23E6BC2898BD23002DFACA /* BoxOfficeModel.swift in Sources */,
 				0A1309E528996DC000B1CCB5 /* BeerViewController.swift in Sources */,
 				0A9BEA6428923AA0003FFBDA /* WebViewController.swift in Sources */,
+				0A8F41C2289CB3F300AC4B96 /* ImageSearchAPIManager.swift in Sources */,
 				0A579EFF289A095300771BEB /* ImageSearchViewController.swift in Sources */,
 				0A1309E228996D4800B1CCB5 /* BeerCollectionViewCell.swift in Sources */,
 				0A9BEA432890DD89003FFBDA /* AppDelegate.swift in Sources */,

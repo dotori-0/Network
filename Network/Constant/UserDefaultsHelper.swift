@@ -40,4 +40,21 @@ class UserDefaultsHelper {  // UserDefaults가 class라서 타입 맞춰 줌
             userDefaults.set(newValue, forKey: Key.age.rawValue)
         }
     }
+    
+    func saveIntArray(key: String, value: [Int]) {
+        userDefaults.set(value, forKey: key)
+    }
+    
+    func getIntArray(key: String) -> [Int] {
+        guard let intArray = userDefaults.array(forKey: key) as? [Int] else {
+            print("Cannot find Int Array")
+            return []
+        }
+        
+        return intArray
+    }
+    
+    func keyExists(key: String) -> Bool {
+        return userDefaults.object(forKey: key) == nil ? false : true
+    }
 }
